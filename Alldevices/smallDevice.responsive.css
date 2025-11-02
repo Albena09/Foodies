@@ -1,0 +1,18 @@
+@media (max-width: 767px) {
+  /* 574 --766 */
+
+  .navbarWrapperMenu {
+    display: none;
+  }
+
+  .navbarMenu__toggle {
+    display: block;
+  }
+ 
+  .bannerWrapperLeft__title {
+    font-size: 51px;
+    font-weight: 600;
+    max-width: 320px;
+  }
+  /* banner */
+}

@@ -1,0 +1,710 @@
+:root {
+  --primary_background_color: #f3fcf7;
+  --secondary_background_color: #f3fafb;
+  --primary_text_color: #06c167;
+  --secondary_text_color: #1d1d1f;
+  --white_color: #ffffff;
+  --inter: "Inter", sans-serif;
+  --banner_bgColor: #f3fafb;
+}
+/* ============= common css ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+ol,
+ul {
+  list-style-type: none;
+  /* list-style: none;  //or anyone can use*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+div,
+li,
+span,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============= common css ================== */
+body {
+  background-color: var(--white_color);
+}
+.heroWrapper nav,
+.heroWrapper #banner {
+  position: relative;
+  z-index: 2;
+}
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /* width: 1447px; */
+  height: 655px;
+  background-color: var(--primary_background_color);
+  z-index: 1;
+}
+.container {
+  width: 1180px;
+  margin: 0 auto;
+}
+/* ================ navbar css start =========== */
+
+#navbar {
+  display: flex;
+  margin-top: 42px;
+  margin-bottom: 64px;
+}
+.navbarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbarWrapper__logo {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--primary_text_color);
+}
+.navbarMenu__toggle {
+  display: none;
+  cursor: pointer;
+}
+.navbarWrapperMenu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.menu_toogle {
+  display: none;
+}
+.navbarWrapperMenu__item {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+  position: relative;
+}
+.navbarWrapperMenu__item::after {
+  position: absolute;
+  content: "";
+  top: 24px;
+  right: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary_text_color);
+  transform: scale(0);
+  transition: all linear 0.2s;
+}
+.navbarWrapperMenu__item:hover {
+  color: var(--primary_text_color);
+}
+.navbarWrapperMenu__item:hover::after {
+  transform: scale(1);
+  cursor: pointer;
+  background-color: var(--primary_text_color);
+}
+/* ================ navbar css end =========== */
+
+/* ================ banner css start =========== */
+
+.bannerWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 121px;
+}
+.bannerWrapperLeft {
+  margin-top: 48px;
+}
+.bannerWrapperLeft__title {
+  max-width: 533px;
+  font-family: "Inter", sans-serif;
+  font-size: 75px;
+  font-weight: 600;
+  color: var(--secondary_text_color);
+  margin-bottom: 11px;
+}
+.bannerWrapperLeft__details {
+  max-width: 533px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+  margin-bottom: 30px;
+}
+.bannerWrapperLeft__btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 29px 27px;
+  background-color: var(--primary_text_color);
+  color: var(--white_color);
+  border: none;
+}
+.bannerWrapperLeft__btn:hover {
+  cursor: pointer;
+  font-size: 18px;
+}
+.bannerWrapperLeft__btn span {
+  margin-left: 27px;
+}
+.bannerWrapperLeftLogo {
+  display: flex;
+  width: 149px;
+  height: 29px;
+  gap: 59px;
+  margin-top: 177px;
+  margin-bottom: 39px;
+}
+.bannerWrapperRight {
+  position: relative;
+}
+.bannerWrapperRight__img {
+  margin-right: 45px;
+}
+
+.bannerWrapperRightRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 230px;
+  height: 53px;
+  background-color: var(--white_color);
+  border-top-right-radius: 27px;
+  border-bottom-right-radius: 27px;
+  position: absolute;
+  top: 296px;
+  left: -89px;
+}
+.bannerWrapperRight__title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+}
+.bannerWrapperRightFeedback {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 230px;
+  height: 53px;
+  background-color: var(--white_color);
+  border-top-left-radius: 27px;
+  border-bottom-left-radius: 27px;
+  position: absolute;
+  top: 208px;
+  right: 0px;
+}
+.bannerWrapperRightDots {
+  position: absolute;
+  content: "";
+  top: 471px;
+  right: 0px;
+}
+/* ================ banner css end =========== */
+
+/* ================ service css start =========== */
+.serviceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(118, 118, 117, 0.25);
+  /* border: 1px solid #707070; */
+  border-left: none;
+  border-right: none;
+  opacity: 1.5;
+  padding: 58px;
+  margin-bottom: 133px;
+}
+.serviceWrapperCart {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+.serviceWrapperCart__body {
+  width: 70px;
+  height: 70px;
+}
+.serviceWrapperCart__img {
+  border-radius: 8px;
+  padding: 22px 18px;
+  background-color: var(--primary_background_color);
+}
+.serviceWrapperCart__title {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+.serviceWrapperCart__info {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+/* ================ service css end =========== */
+
+/* ================ benefit css start =========== */
+.benefitWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 84px;
+}
+/* benefitWrapperLeft */
+.benefitWrapperLeft {
+  width: 541px;
+  height: 608px;
+  /* background-color: #F3FAFB; */
+  background-color: var(--banner_bgColor);
+  padding: 0 48px 95px;
+}
+.benefitWrapperLeft__img {
+  width: 443px;
+  height: 513px;
+}
+/* benefitWrapperLeft */
+
+/* benefitWrapperRight */
+.benefitWrapperRight {
+  display: flex;
+  flex-direction: column;
+}
+.benefitWrapperRight__title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.benefitWrapperRight__content {
+  position: relative;
+}
+.benefitWrapperRight__heading {
+  max-width: 537px;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+}
+.benefitWrapperRight__polcadot {
+  width: 174px;
+  height: 174px;
+  position: absolute;
+  content: "";
+  bottom: -43px;
+  left: -60px;
+  color: rgba(118, 118, 117, 0.25);
+  /* color: var(--primary_background_color); */
+}
+.benefitWrapperRight_info {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 21px;
+}
+.benefitWrapperRight_img {
+  padding-right: 21px;
+}
+/* benefitWrapperRight */
+/* ================ benefit css end =========== */
+
+/* ================ stars css start =========== */
+#stars {
+  margin-top: 138px;
+}
+.starsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.starsWrapperLeft__tile {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 78px;
+}
+.starsWrapperLeft__heading {
+  max-width: 570px;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 55px;
+}
+.starsWrapperLeft__info {
+  margin-top: 55px;
+}
+.starsWrapperRight {
+  width: 541px;
+  height: 608px;
+  background-color: var(--banner_bgColor);
+}
+.starsWrapperRight__img {
+  margin-bottom: 98px;
+  margin-left: 98px;
+}
+
+.starsWrapperLeftContent {
+  width: 108px;
+  height: 82px;
+  display: flex;
+  gap: 84px;
+}
+.starsWrapperLeftContent__img {
+  margin-bottom: 7px;
+}
+.starsWrapperLeftContent__details {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.65;
+}
+.starsWrapperLeftContent__btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 51px;
+  padding: 29px 27px;
+  background-color: var(--primary_text_color);
+  color: var(--white_color);
+  border: none;
+}
+.starsWrapperLeftContent__btn span {
+  margin-left: 15px;
+}
+/* ================ stars css end =========== */
+
+/* ================ features css start =========== */
+#features {
+  margin-top: 197px;
+}
+.featuresWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* top part  start*/
+.featuresWrapperContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 1180px;
+  display: block;
+}
+.featuresWrapperContent__title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.featuresWrapperContent__heading {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 70px;
+}
+/* top part end */
+
+/* bottom part */
+.featuresGridContainer {
+  display: flex;
+  gap: 0;
+}
+.featuresCardImg {
+  /* width: 293px;
+  height: 293px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featureCardContent {
+  /* width: 293px;
+  height: 293px; */
+  width: 100%;
+  height: 100%;
+  padding-left: 37px;
+  padding-top: 37px;
+  border: 1.5px solid var(--primary_text_color);
+  background-color: #e6f9f0;
+}
+.cardContent__title {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--secondary_text_color);
+  margin-bottom: 25px;
+  max-width: 228px;
+}
+.cardContent__details {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+  max-width: 190px;
+  margin-bottom: 38px;
+}
+.cardContent__btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* margin-top: 51px; */
+  padding: 13px 14px;
+  background-color: #e6f9f0;
+  color: var(--primary_text_color);
+  border: none;
+}
+.cardContent__btn span {
+  margin-left: 8px;
+}
+/* bottom part */
+/* ================ features css end =========== */
+
+/* ================ product css start =========== */
+#product {
+  margin-top: 192px;
+}
+.productHeading {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  margin-bottom: 63px;
+}
+.productHeading__caption {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.productHeading__title {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+/* bottom */
+.productCardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.productCart {
+  width: 270px;
+  height: 445px;
+  border: 2px solid rgba(118, 118, 117, 0.25);
+  /* border: 2px solid #767675;  */
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productCart:hover {
+  border: 2px solid var(--primary_text_color);
+}
+.productCart_img {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.productCart__caption {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 21px;
+}
+.productCart__price {
+  margin-top: 25px;
+  display: flex;
+  gap: 8px;
+}
+.productCart__price25 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #767675;
+  opacity: 0.35;
+}
+.productCart__price29 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #06c167;
+}
+.productCard__btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 18px 30px;
+  background-color: var(--white_color);
+  color: #06c167;
+  border: 2px solid #06c167;
+  display: inline-block;
+  margin: 30px 0;
+}
+.productCard__btn span img {
+  margin-left: 20px;
+}
+/* ================ product css end =========== */
+
+/* ================ getStarted css start =========== */
+#getStarted {
+  margin-top: 193px;
+}
+.getStartedWrapper {
+  background: url(./images/footer/footerimage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 459px;
+}
+.getStartedContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.getStartedContent__title {
+  max-width: 799px;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--white_color);
+  margin-top: 110px;
+  text-align: center;
+}
+.getStartedContent__btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 29px 40px;
+  background-color: var(--primary_text_color);
+  color: var(--white_color);
+  display: inline-block;
+  margin-top: 37px;
+}
+.getStartedContent__btn span {
+  margin-left: 23px;
+}
+/* ================ getStarted css end =========== */
+
+/* ================ footer top css start =========== */
+#footer {
+  margin-top: 64px;
+}
+.footerWraper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 68px;
+}
+.footerLink {
+  max-width: 284px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 49px;
+}
+.footerLogo {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--primary_text_color);
+}
+.footerDesc {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+}
+.footerSocialMedia {
+  display: flex;
+  max-width: 100px;
+  gap: 23px;
+}
+.footerSocialMedia a img {
+  transition: opacity 0.3s ease;
+}
+.footerSocialMedia a img:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.footerContact__title {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--secondary_text_color);
+  text-align: center;
+  margin-bottom: 41px;
+}
+.footerContact__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+}
+.footerContact__item a {
+  color: var(--secondary_text_color);
+}
+.footerContact__item a:hover {
+  color: var(--primary_text_color);
+}
+.footerContact__info {
+  max-width: 338px;
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary_text_color);
+  margin-bottom: 37px;
+}
+.footerContact__email {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.51;
+  padding: 17px 142px 17px 24px;
+  color: var(--secondary_text_color);
+  background-color: #f0f1ec;
+}
+.footerContact__subscribe {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.51;
+  padding: 17px 25px;
+  background-color: var(--primary_text_color);
+  color: var(--white_color);
+}
+/* ================ footer top css end =========== */
+
+/* ================ footer bottom css start =========== */
+.footerCopyright {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 96px;
+  padding-bottom: 38px;
+}
+/* ================ footer bottom css end =========== */
